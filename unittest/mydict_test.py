@@ -29,7 +29,7 @@ class TestDict(unittest.TestCase): #编写一个测试类，从unittset.TestCase
 
 	def keyerror(self):		#断言抛出指定类型的错误，当访问不存在的key时   
 		d = Dict()			
-		with self.assertRaises(KeyError):  #with ?
+		with self.assertRaises(KeyError):  #with:执行完后关闭了这个错误，使后边的程序还能执行
 			value = d['empty']
 
 	def test_attrerror(self):   

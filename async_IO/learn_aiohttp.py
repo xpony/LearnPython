@@ -8,7 +8,7 @@ async def index(request):#reques？
 
 async def hello(request):
 	await asyncio.sleep(1)
-	text = '<h1>hello, %s!</h1>' % request.match_info['name']
+	text = '<h1>hello, %s!</h1>' % request.match_info['name'] #传入的参数从request上获取
 	return web.Response(body=text.encode('utf-8'), content_type='text/html')
 
 async def init(loop):
